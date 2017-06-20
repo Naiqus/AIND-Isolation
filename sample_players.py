@@ -8,6 +8,8 @@ own agent and example heuristic functions.
 
 from random import randint
 
+from game_agent import MinimaxPlayer, AlphaBetaPlayer
+
 
 def null_score(game, player):
     """This heuristic presumes no knowledge for non-terminal states, and
@@ -256,7 +258,7 @@ if __name__ == "__main__":
     from isolation import Board
 
     # create an isolation board (by default 7x7)
-    player1 = RandomPlayer()
+    player1 = AlphaBetaPlayer()
     player2 = GreedyPlayer()
     game = Board(player1, player2)
 
